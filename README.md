@@ -1,2 +1,2 @@
 # git.sh
-Utilities for git.
+Utility scripts for git.
