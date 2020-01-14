@@ -2,6 +2,8 @@
 
 read -p "Input git user name: " git_user_name
 read -p "Input git user email: " git_user_email
+read -p "Input http proxy: " git_http_proxy
+
 read -p "OK? (y/N): " yn
 case "$yn" in [yY]*) ;; *) echo "abort." ; exit ;; esac
 
@@ -13,6 +15,12 @@ git config --global core.autocrlf false
 
 # setup for remote access
 git config --global http.sslverify false
+
+if [ -n "$git_http_proxy" ]; then
+	git config --global http.proxy ${git_http_proxy}
+else
+	git config --global --unset http.proxy
+fi
 
 # setup for editor
 git config --global core.editor 'vim -c "set fenc=utf-8"'
