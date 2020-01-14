@@ -19,7 +19,9 @@ git config --global http.sslverify false
 if [ -n "$git_http_proxy" ]; then
 	git config --global http.proxy ${git_http_proxy}
 else
-	git config --global --unset http.proxy
+	echo "# http proxy is not specified."
+	echo "# If you want to reset it, type 'git config --global --unset http.proxy'."
+	# git config --global --unset http.proxy
 fi
 
 # setup for editor
