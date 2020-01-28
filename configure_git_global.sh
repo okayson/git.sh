@@ -32,6 +32,10 @@ git config --global color.diff auto
 git config --global color.status auto
 git config --global color.branch auto
 
+# setup for ignore
+git config --global core.excludesfile ~/.gitignore
+touch ~/.gitignore
+
 # show settings
 echo .
 echo "+++ Git configuratons are as follows. +++"
