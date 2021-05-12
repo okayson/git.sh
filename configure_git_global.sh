@@ -27,6 +27,10 @@ fi
 # setup for editor
 git config --global core.editor 'vim -c "set fenc=utf-8"'
 
+# setup for difftool
+git config --global diff.tool vimdiff
+git config --global difftool.prompt false
+
 # setup for color
 git config --global color.ui auto
 git config --global color.diff auto
