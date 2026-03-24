@@ -21,6 +21,6 @@ fi
 
 # show settings
 echo .
-echo "+++ Git configuratons are as follows. +++"
+echo "---------- Git configuratons are as follows. ----------"
 git config --list
 
